@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+echo hostname: $HOSTNAME
+
 mkdir -p /etc/dpkg/dpkg.cfg.d
 cat >/etc/dpkg/dpkg.cfg.d/01_nodoc <<EOF
 path-exclude /usr/share/doc/*

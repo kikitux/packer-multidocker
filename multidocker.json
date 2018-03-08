@@ -9,7 +9,9 @@
             "type": "docker",
             "name": "xenial-vim",
             "run_command": [
-                "-d","-t","{{.Image}}",
+                "-d",
+                "--hostname","xenial-vim",
+                "-t","{{.Image}}",
                 "/bin/bash","-l"
             ]
         },
@@ -20,7 +22,9 @@
             "type": "docker",
             "name": "xenial-git",
             "run_command": [
-                "-d","-t","{{.Image}}",
+                "-d",
+                "--hostname","xenial-git",
+                "-t","{{.Image}}",
                 "/bin/bash","-l"
             ]
         }
